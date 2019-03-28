@@ -1,0 +1,2611 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "description": "List of all AWS Services",
+    "name": "aws_services",
+    "version": "1",
+    "enumerationValues": [
+      {
+        "value": "aws",
+        "synonyms": []
+      },
+      {
+        "value": "ec2",
+        "synonyms": []
+      },
+      {
+        "value": "vpc",
+        "synonyms": []
+      },
+      {
+        "value": "create",
+        "synonyms": []
+      },
+      {
+        "value": "instance",
+        "synonyms": []
+      },
+      {
+        "value": "using",
+        "synonyms": []
+      },
+      {
+        "value": "setup",
+        "synonyms": []
+      },
+      {
+        "value": "access",
+        "synonyms": []
+      },
+      {
+        "value": "devops",
+        "synonyms": []
+      },
+      {
+        "value": "lambda",
+        "synonyms": []
+      },
+      {
+        "value": "serverless",
+        "synonyms": []
+      },
+      {
+        "value": "ebs",
+        "synonyms": []
+      },
+      {
+        "value": "data",
+        "synonyms": []
+      },
+      {
+        "value": "jenkins",
+        "synonyms": []
+      },
+      {
+        "value": "key",
+        "synonyms": []
+      },
+      {
+        "value": "project",
+        "synonyms": []
+      },
+      {
+        "value": "iam",
+        "synonyms": []
+      },
+      {
+        "value": "introduction",
+        "synonyms": []
+      },
+      {
+        "value": "use",
+        "synonyms": []
+      },
+      {
+        "value": "store",
+        "synonyms": []
+      },
+      {
+        "value": "elastic",
+        "synonyms": []
+      },
+      {
+        "value": "cloud",
+        "synonyms": []
+      },
+      {
+        "value": "security",
+        "synonyms": []
+      },
+      {
+        "value": "private",
+        "synonyms": []
+      },
+      {
+        "value": "docker",
+        "synonyms": []
+      },
+      {
+        "value": "demo",
+        "synonyms": []
+      },
+      {
+        "value": "linux",
+        "synonyms": []
+      },
+      {
+        "value": "secure",
+        "synonyms": []
+      },
+      {
+        "value": "amazon",
+        "synonyms": []
+      },
+      {
+        "value": "cloudwatch",
+        "synonyms": []
+      },
+      {
+        "value": "kubernetes",
+        "synonyms": []
+      },
+      {
+        "value": "account",
+        "synonyms": []
+      },
+      {
+        "value": "application",
+        "synonyms": []
+      },
+      {
+        "value": "ami",
+        "synonyms": []
+      },
+      {
+        "value": "management",
+        "synonyms": []
+      },
+      {
+        "value": "best",
+        "synonyms": []
+      },
+      {
+        "value": "storage",
+        "synonyms": []
+      },
+      {
+        "value": "instances",
+        "synonyms": []
+      },
+      {
+        "value": "automation",
+        "synonyms": []
+      },
+      {
+        "value": "logs",
+        "synonyms": []
+      },
+      {
+        "value": "cross",
+        "synonyms": []
+      },
+      {
+        "value": "snapshots",
+        "synonyms": []
+      },
+      {
+        "value": "groups",
+        "synonyms": []
+      },
+      {
+        "value": "simple",
+        "synonyms": []
+      },
+      {
+        "value": "custom",
+        "synonyms": []
+      },
+      {
+        "value": "public",
+        "synonyms": []
+      },
+      {
+        "value": "configuration",
+        "synonyms": []
+      },
+      {
+        "value": "solution",
+        "synonyms": []
+      },
+      {
+        "value": "tagging",
+        "synonyms": []
+      },
+      {
+        "value": "git",
+        "synonyms": []
+      },
+      {
+        "value": "practices",
+        "synonyms": []
+      },
+      {
+        "value": "need",
+        "synonyms": []
+      },
+      {
+        "value": "flow",
+        "synonyms": []
+      },
+      {
+        "value": "configure",
+        "synonyms": []
+      },
+      {
+        "value": "service",
+        "synonyms": []
+      },
+      {
+        "value": "upload",
+        "synonyms": []
+      },
+      {
+        "value": "web",
+        "synonyms": []
+      },
+      {
+        "value": "commands",
+        "synonyms": []
+      },
+      {
+        "value": "codecommit",
+        "synonyms": []
+      },
+      {
+        "value": "load",
+        "synonyms": []
+      },
+      {
+        "value": "gateway",
+        "synonyms": []
+      },
+      {
+        "value": "costs",
+        "synonyms": []
+      },
+      {
+        "value": "design",
+        "synonyms": []
+      },
+      {
+        "value": "installation",
+        "synonyms": []
+      },
+      {
+        "value": "migration",
+        "synonyms": []
+      },
+      {
+        "value": "part",
+        "synonyms": []
+      },
+      {
+        "value": "cloudformation",
+        "synonyms": []
+      },
+      {
+        "value": "kms",
+        "synonyms": []
+      },
+      {
+        "value": "keys",
+        "synonyms": []
+      },
+      {
+        "value": "elasticsearch",
+        "synonyms": []
+      },
+      {
+        "value": "parameter",
+        "synonyms": []
+      },
+      {
+        "value": "rds",
+        "synonyms": []
+      },
+      {
+        "value": "balancer",
+        "synonyms": []
+      },
+      {
+        "value": "file",
+        "synonyms": []
+      },
+      {
+        "value": "through",
+        "synonyms": []
+      },
+      {
+        "value": "sns",
+        "synonyms": []
+      },
+      {
+        "value": "user",
+        "synonyms": []
+      },
+      {
+        "value": "ansible",
+        "synonyms": []
+      },
+      {
+        "value": "roles",
+        "synonyms": []
+      },
+      {
+        "value": "cloudfront",
+        "synonyms": []
+      },
+      {
+        "value": "role",
+        "synonyms": []
+      },
+      {
+        "value": "peering",
+        "synonyms": []
+      },
+      {
+        "value": "backup",
+        "synonyms": []
+      },
+      {
+        "value": "network",
+        "synonyms": []
+      },
+      {
+        "value": "address",
+        "synonyms": []
+      },
+      {
+        "value": "container",
+        "synonyms": []
+      },
+      {
+        "value": "scaling",
+        "synonyms": []
+      },
+      {
+        "value": "nat",
+        "synonyms": []
+      },
+      {
+        "value": "cost",
+        "synonyms": []
+      },
+      {
+        "value": "subnet",
+        "synonyms": []
+      },
+      {
+        "value": "auto",
+        "synonyms": []
+      },
+      {
+        "value": "region",
+        "synonyms": []
+      },
+      {
+        "value": "resources",
+        "synonyms": []
+      },
+      {
+        "value": "manager",
+        "synonyms": []
+      },
+      {
+        "value": "free",
+        "synonyms": []
+      },
+      {
+        "value": "event",
+        "synonyms": []
+      },
+      {
+        "value": "change",
+        "synonyms": []
+      },
+      {
+        "value": "elb",
+        "synonyms": []
+      },
+      {
+        "value": "steps",
+        "synonyms": []
+      },
+      {
+        "value": "efs",
+        "synonyms": []
+      },
+      {
+        "value": "options",
+        "synonyms": []
+      },
+      {
+        "value": "policies",
+        "synonyms": []
+      },
+      {
+        "value": "performance",
+        "synonyms": []
+      },
+      {
+        "value": "block",
+        "synonyms": []
+      },
+      {
+        "value": "basics",
+        "synonyms": []
+      },
+      {
+        "value": "encrypt",
+        "synonyms": []
+      },
+      {
+        "value": "recovery",
+        "synonyms": []
+      },
+      {
+        "value": "group",
+        "synonyms": []
+      },
+      {
+        "value": "cli",
+        "synonyms": []
+      },
+      {
+        "value": "master",
+        "synonyms": []
+      },
+      {
+        "value": "start",
+        "synonyms": []
+      },
+      {
+        "value": "server",
+        "synonyms": []
+      },
+      {
+        "value": "static",
+        "synonyms": []
+      },
+      {
+        "value": "pre",
+        "synonyms": []
+      },
+      {
+        "value": "high",
+        "synonyms": []
+      },
+      {
+        "value": "install",
+        "synonyms": []
+      },
+      {
+        "value": "object",
+        "synonyms": []
+      },
+      {
+        "value": "virtual",
+        "synonyms": []
+      },
+      {
+        "value": "reduce",
+        "synonyms": []
+      },
+      {
+        "value": "python",
+        "synonyms": []
+      },
+      {
+        "value": "resource",
+        "synonyms": []
+      },
+      {
+        "value": "tier",
+        "synonyms": []
+      },
+      {
+        "value": "types",
+        "synonyms": []
+      },
+      {
+        "value": "issues",
+        "synonyms": []
+      },
+      {
+        "value": "troubleshoot",
+        "synonyms": []
+      },
+      {
+        "value": "cloudtrail",
+        "synonyms": []
+      },
+      {
+        "value": "repository",
+        "synonyms": []
+      },
+      {
+        "value": "integration",
+        "synonyms": []
+      },
+      {
+        "value": "multiple",
+        "synonyms": []
+      },
+      {
+        "value": "signed",
+        "synonyms": []
+      },
+      {
+        "value": "cycle",
+        "synonyms": []
+      },
+      {
+        "value": "snapshot",
+        "synonyms": []
+      },
+      {
+        "value": "valaxy",
+        "synonyms": []
+      },
+      {
+        "value": "life",
+        "synonyms": []
+      },
+      {
+        "value": "urls",
+        "synonyms": []
+      },
+      {
+        "value": "ssm",
+        "synonyms": []
+      },
+      {
+        "value": "code",
+        "synonyms": []
+      },
+      {
+        "value": "route",
+        "synonyms": []
+      },
+      {
+        "value": "quick",
+        "synonyms": []
+      },
+      {
+        "value": "move",
+        "synonyms": []
+      },
+      {
+        "value": "copy",
+        "synonyms": []
+      },
+      {
+        "value": "investigate",
+        "synonyms": []
+      },
+      {
+        "value": "replication",
+        "synonyms": []
+      },
+      {
+        "value": "running",
+        "synonyms": []
+      },
+      {
+        "value": "test",
+        "synonyms": []
+      },
+      {
+        "value": "scratch",
+        "synonyms": []
+      },
+      {
+        "value": "started",
+        "synonyms": []
+      },
+      {
+        "value": "monitoring",
+        "synonyms": []
+      },
+      {
+        "value": "api",
+        "synonyms": []
+      },
+      {
+        "value": "first",
+        "synonyms": []
+      },
+      {
+        "value": "improve",
+        "synonyms": []
+      },
+      {
+        "value": "decrypt",
+        "synonyms": []
+      },
+      {
+        "value": "system",
+        "synonyms": []
+      },
+      {
+        "value": "dashboards",
+        "synonyms": []
+      },
+      {
+        "value": "cidr",
+        "synonyms": []
+      },
+      {
+        "value": "getting",
+        "synonyms": []
+      },
+      {
+        "value": "golden",
+        "synonyms": []
+      },
+      {
+        "value": "update",
+        "synonyms": []
+      },
+      {
+        "value": "different",
+        "synonyms": []
+      },
+      {
+        "value": "between",
+        "synonyms": []
+      },
+      {
+        "value": "creation",
+        "synonyms": []
+      },
+      {
+        "value": "accounts",
+        "synonyms": []
+      },
+      {
+        "value": "command",
+        "synonyms": []
+      },
+      {
+        "value": "systems",
+        "synonyms": []
+      },
+      {
+        "value": "configuring",
+        "synonyms": []
+      },
+      {
+        "value": "automatically",
+        "synonyms": []
+      },
+      {
+        "value": "files",
+        "synonyms": []
+      },
+      {
+        "value": "sftp",
+        "synonyms": []
+      },
+      {
+        "value": "pipeline",
+        "synonyms": []
+      },
+      {
+        "value": "buckets",
+        "synonyms": []
+      },
+      {
+        "value": "bucket",
+        "synonyms": []
+      },
+      {
+        "value": "events",
+        "synonyms": []
+      },
+      {
+        "value": "run",
+        "synonyms": []
+      },
+      {
+        "value": "live",
+        "synonyms": []
+      },
+      {
+        "value": "sonarqube",
+        "synonyms": []
+      },
+      {
+        "value": "log",
+        "synonyms": []
+      },
+      {
+        "value": "mini",
+        "synonyms": []
+      },
+      {
+        "value": "time",
+        "synonyms": []
+      },
+      {
+        "value": "installing",
+        "synonyms": []
+      },
+      {
+        "value": "subnets",
+        "synonyms": []
+      },
+      {
+        "value": "domain",
+        "synonyms": []
+      },
+      {
+        "value": "route53",
+        "synonyms": []
+      },
+      {
+        "value": "encrypted",
+        "synonyms": []
+      },
+      {
+        "value": "volume",
+        "synonyms": []
+      },
+      {
+        "value": "services",
+        "synonyms": []
+      },
+      {
+        "value": "images",
+        "synonyms": []
+      },
+      {
+        "value": "plan",
+        "synonyms": []
+      },
+      {
+        "value": "planning",
+        "synonyms": []
+      },
+      {
+        "value": "agent",
+        "synonyms": []
+      },
+      {
+        "value": "billing",
+        "synonyms": []
+      },
+      {
+        "value": "control",
+        "synonyms": []
+      },
+      {
+        "value": "walkthrough",
+        "synonyms": []
+      },
+      {
+        "value": "essentials",
+        "synonyms": []
+      },
+      {
+        "value": "know",
+        "synonyms": []
+      },
+      {
+        "value": "trigger",
+        "synonyms": []
+      },
+      {
+        "value": "cdn",
+        "synonyms": []
+      },
+      {
+        "value": "connect",
+        "synonyms": []
+      },
+      {
+        "value": "inside",
+        "synonyms": []
+      },
+      {
+        "value": "automate",
+        "synonyms": []
+      },
+      {
+        "value": "guardduty",
+        "synonyms": []
+      },
+      {
+        "value": "rotation",
+        "synonyms": []
+      },
+      {
+        "value": "unified",
+        "synonyms": []
+      },
+      {
+        "value": "variables",
+        "synonyms": []
+      },
+      {
+        "value": "versioning",
+        "synonyms": []
+      },
+      {
+        "value": "alarms",
+        "synonyms": []
+      },
+      {
+        "value": "nexus",
+        "synonyms": []
+      },
+      {
+        "value": "basic",
+        "synonyms": []
+      },
+      {
+        "value": "encryption",
+        "synonyms": []
+      },
+      {
+        "value": "orchestration",
+        "synonyms": []
+      },
+      {
+        "value": "image",
+        "synonyms": []
+      },
+      {
+        "value": "securing",
+        "synonyms": []
+      },
+      {
+        "value": "maven",
+        "synonyms": []
+      },
+      {
+        "value": "real",
+        "synonyms": []
+      },
+      {
+        "value": "findings",
+        "synonyms": []
+      },
+      {
+        "value": "objects",
+        "synonyms": []
+      },
+      {
+        "value": "problems",
+        "synonyms": []
+      },
+      {
+        "value": "build",
+        "synonyms": []
+      },
+      {
+        "value": "recover",
+        "synonyms": []
+      },
+      {
+        "value": "website",
+        "synonyms": []
+      },
+      {
+        "value": "host",
+        "synonyms": []
+      },
+      {
+        "value": "manage",
+        "synonyms": []
+      },
+      {
+        "value": "set",
+        "synonyms": []
+      },
+      {
+        "value": "content",
+        "synonyms": []
+      },
+      {
+        "value": "identity",
+        "synonyms": []
+      },
+      {
+        "value": "engineer",
+        "synonyms": []
+      },
+      {
+        "value": "production",
+        "synonyms": []
+      },
+      {
+        "value": "policy",
+        "synonyms": []
+      },
+      {
+        "value": "automating",
+        "synonyms": []
+      },
+      {
+        "value": "tomcat",
+        "synonyms": []
+      },
+      {
+        "value": "routing",
+        "synonyms": []
+      },
+      {
+        "value": "dns",
+        "synonyms": []
+      },
+      {
+        "value": "training",
+        "synonyms": []
+      },
+      {
+        "value": "telugu",
+        "synonyms": []
+      },
+      {
+        "value": "secrets",
+        "synonyms": []
+      },
+      {
+        "value": "kibana",
+        "synonyms": []
+      },
+      {
+        "value": "alerts",
+        "synonyms": []
+      },
+      {
+        "value": "monitor",
+        "synonyms": []
+      },
+      {
+        "value": "manual",
+        "synonyms": []
+      },
+      {
+        "value": "functions",
+        "synonyms": []
+      },
+      {
+        "value": "attach",
+        "synonyms": []
+      },
+      {
+        "value": "enable",
+        "synonyms": []
+      },
+      {
+        "value": "practice",
+        "synonyms": []
+      },
+      {
+        "value": "disaster",
+        "synonyms": []
+      },
+      {
+        "value": "environment",
+        "synonyms": []
+      },
+      {
+        "value": "type",
+        "synonyms": []
+      },
+      {
+        "value": "incident",
+        "synonyms": []
+      },
+      {
+        "value": "vpn",
+        "synonyms": []
+      },
+      {
+        "value": "github",
+        "synonyms": []
+      },
+      {
+        "value": "customer",
+        "synonyms": []
+      },
+      {
+        "value": "hosted",
+        "synonyms": []
+      },
+      {
+        "value": "split",
+        "synonyms": []
+      },
+      {
+        "value": "availability",
+        "synonyms": []
+      },
+      {
+        "value": "alias",
+        "synonyms": []
+      },
+      {
+        "value": "function",
+        "synonyms": []
+      },
+      {
+        "value": "minutes",
+        "synonyms": []
+      },
+      {
+        "value": "hub",
+        "synonyms": []
+      },
+      {
+        "value": "purchase",
+        "synonyms": []
+      },
+      {
+        "value": "optimization",
+        "synonyms": []
+      },
+      {
+        "value": "line",
+        "synonyms": []
+      },
+      {
+        "value": "ecr",
+        "synonyms": []
+      },
+      {
+        "value": "announcements",
+        "synonyms": []
+      },
+      {
+        "value": "machine",
+        "synonyms": []
+      },
+      {
+        "value": "vpcs",
+        "synonyms": []
+      },
+      {
+        "value": "cmk",
+        "synonyms": []
+      },
+      {
+        "value": "delete",
+        "synonyms": []
+      },
+      {
+        "value": "budgets",
+        "synonyms": []
+      },
+      {
+        "value": "compute",
+        "synonyms": []
+      },
+      {
+        "value": "backups",
+        "synonyms": []
+      },
+      {
+        "value": "continuous",
+        "synonyms": []
+      },
+      {
+        "value": "connections",
+        "synonyms": []
+      },
+      {
+        "value": "indices",
+        "synonyms": []
+      },
+      {
+        "value": "deep",
+        "synonyms": []
+      },
+      {
+        "value": "optimizing",
+        "synonyms": []
+      },
+      {
+        "value": "registry",
+        "synonyms": []
+      },
+      {
+        "value": "beginners",
+        "synonyms": []
+      },
+      {
+        "value": "tag",
+        "synonyms": []
+      },
+      {
+        "value": "zone",
+        "synonyms": []
+      },
+      {
+        "value": "read",
+        "synonyms": []
+      },
+      {
+        "value": "correlation",
+        "synonyms": []
+      },
+      {
+        "value": "threat",
+        "synonyms": []
+      },
+      {
+        "value": "extend",
+        "synonyms": []
+      },
+      {
+        "value": "incremental",
+        "synonyms": []
+      },
+      {
+        "value": "compliance",
+        "synonyms": []
+      },
+      {
+        "value": "analyze",
+        "synonyms": []
+      },
+      {
+        "value": "resolution",
+        "synonyms": []
+      },
+      {
+        "value": "credential",
+        "synonyms": []
+      },
+      {
+        "value": "calculator",
+        "synonyms": []
+      },
+      {
+        "value": "tips",
+        "synonyms": []
+      },
+      {
+        "value": "modify",
+        "synonyms": []
+      },
+      {
+        "value": "implementation",
+        "synonyms": []
+      },
+      {
+        "value": "endpoint",
+        "synonyms": []
+      },
+      {
+        "value": "deploy",
+        "synonyms": []
+      },
+      {
+        "value": "old",
+        "synonyms": []
+      },
+      {
+        "value": "components",
+        "synonyms": []
+      },
+      {
+        "value": "per",
+        "synonyms": []
+      },
+      {
+        "value": "bootstrap",
+        "synonyms": []
+      },
+      {
+        "value": "index",
+        "synonyms": []
+      },
+      {
+        "value": "login",
+        "synonyms": []
+      },
+      {
+        "value": "visualize",
+        "synonyms": []
+      },
+      {
+        "value": "volumes",
+        "synonyms": []
+      },
+      {
+        "value": "migrate",
+        "synonyms": []
+      },
+      {
+        "value": "name",
+        "synonyms": []
+      },
+      {
+        "value": "eni",
+        "synonyms": []
+      },
+      {
+        "value": "internet",
+        "synonyms": []
+      },
+      {
+        "value": "node",
+        "synonyms": []
+      },
+      {
+        "value": "assessments",
+        "synonyms": []
+      },
+      {
+        "value": "analysis",
+        "synonyms": []
+      },
+      {
+        "value": "integrate",
+        "synonyms": []
+      },
+      {
+        "value": "multi",
+        "synonyms": []
+      },
+      {
+        "value": "edge",
+        "synonyms": []
+      },
+      {
+        "value": "coding",
+        "synonyms": []
+      },
+      {
+        "value": "pair",
+        "synonyms": []
+      },
+      {
+        "value": "lost",
+        "synonyms": []
+      },
+      {
+        "value": "stop",
+        "synonyms": []
+      },
+      {
+        "value": "tools",
+        "synonyms": []
+      },
+      {
+        "value": "responsibilities",
+        "synonyms": []
+      },
+      {
+        "value": "restrict",
+        "synonyms": []
+      },
+      {
+        "value": "learn",
+        "synonyms": []
+      },
+      {
+        "value": "transfer",
+        "synonyms": []
+      },
+      {
+        "value": "mount",
+        "synonyms": []
+      },
+      {
+        "value": "additional",
+        "synonyms": []
+      },
+      {
+        "value": "artifact",
+        "synonyms": []
+      },
+      {
+        "value": "protect",
+        "synonyms": []
+      },
+      {
+        "value": "java",
+        "synonyms": []
+      },
+      {
+        "value": "webhosting",
+        "synonyms": []
+      },
+      {
+        "value": "bot",
+        "synonyms": []
+      },
+      {
+        "value": "inspector",
+        "synonyms": []
+      },
+      {
+        "value": "vulnerability",
+        "synonyms": []
+      },
+      {
+        "value": "users",
+        "synonyms": []
+      },
+      {
+        "value": "two",
+        "synonyms": []
+      },
+      {
+        "value": "300tb",
+        "synonyms": []
+      },
+      {
+        "value": "placement",
+        "synonyms": []
+      },
+      {
+        "value": "low",
+        "synonyms": []
+      },
+      {
+        "value": "automatic",
+        "synonyms": []
+      },
+      {
+        "value": "add",
+        "synonyms": []
+      },
+      {
+        "value": "containers",
+        "synonyms": []
+      },
+      {
+        "value": "identify",
+        "synonyms": []
+      },
+      {
+        "value": "userdata",
+        "synonyms": []
+      },
+      {
+        "value": "state",
+        "synonyms": []
+      },
+      {
+        "value": "remove",
+        "synonyms": []
+      },
+      {
+        "value": "unused",
+        "synonyms": []
+      },
+      {
+        "value": "cleanup",
+        "synonyms": []
+      },
+      {
+        "value": "sizing",
+        "synonyms": []
+      },
+      {
+        "value": "step",
+        "synonyms": []
+      },
+      {
+        "value": "tco",
+        "synonyms": []
+      },
+      {
+        "value": "onpremise",
+        "synonyms": []
+      },
+      {
+        "value": "difference",
+        "synonyms": []
+      },
+      {
+        "value": "metrics",
+        "synonyms": []
+      },
+      {
+        "value": "plugins",
+        "synonyms": []
+      },
+      {
+        "value": "nfs",
+        "synonyms": []
+      },
+      {
+        "value": "onto",
+        "synonyms": []
+      },
+      {
+        "value": "detection",
+        "synonyms": []
+      },
+      {
+        "value": "notification",
+        "synonyms": []
+      },
+      {
+        "value": "replica",
+        "synonyms": []
+      },
+      {
+        "value": "topic",
+        "synonyms": []
+      },
+      {
+        "value": "technical",
+        "synonyms": []
+      },
+      {
+        "value": "boto3",
+        "synonyms": []
+      },
+      {
+        "value": "dive",
+        "synonyms": []
+      },
+      {
+        "value": "repositories",
+        "synonyms": []
+      },
+      {
+        "value": "write",
+        "synonyms": []
+      },
+      {
+        "value": "template",
+        "synonyms": []
+      },
+      {
+        "value": "problem",
+        "synonyms": []
+      },
+      {
+        "value": "part02of02",
+        "synonyms": []
+      },
+      {
+        "value": "wordpress",
+        "synonyms": []
+      },
+      {
+        "value": "new",
+        "synonyms": []
+      },
+      {
+        "value": "autoscaling",
+        "synonyms": []
+      },
+      {
+        "value": "pod",
+        "synonyms": []
+      },
+      {
+        "value": "databases",
+        "synonyms": []
+      },
+      {
+        "value": "ground",
+        "synonyms": []
+      },
+      {
+        "value": "deletion",
+        "synonyms": []
+      },
+      {
+        "value": "advantages",
+        "synonyms": []
+      },
+      {
+        "value": "latest",
+        "synonyms": []
+      },
+      {
+        "value": "distribute",
+        "synonyms": []
+      },
+      {
+        "value": "reencrypt",
+        "synonyms": []
+      },
+      {
+        "value": "supported",
+        "synonyms": []
+      },
+      {
+        "value": "record",
+        "synonyms": []
+      },
+      {
+        "value": "east",
+        "synonyms": []
+      },
+      {
+        "value": "filesytem",
+        "synonyms": []
+      },
+      {
+        "value": "available",
+        "synonyms": []
+      },
+      {
+        "value": "reserved",
+        "synonyms": []
+      },
+      {
+        "value": "reductions",
+        "synonyms": []
+      },
+      {
+        "value": "second",
+        "synonyms": []
+      },
+      {
+        "value": "coudfront",
+        "synonyms": []
+      },
+      {
+        "value": "integrating",
+        "synonyms": []
+      },
+      {
+        "value": "clone",
+        "synonyms": []
+      },
+      {
+        "value": "common",
+        "synonyms": []
+      },
+      {
+        "value": "setups",
+        "synonyms": []
+      },
+      {
+        "value": "program",
+        "synonyms": []
+      },
+      {
+        "value": "hello",
+        "synonyms": []
+      },
+      {
+        "value": "context",
+        "synonyms": []
+      },
+      {
+        "value": "dynamo",
+        "synonyms": []
+      },
+      {
+        "value": "boilerplate",
+        "synonyms": []
+      },
+      {
+        "value": "infrastructure",
+        "synonyms": []
+      },
+      {
+        "value": "helpdesk",
+        "synonyms": []
+      },
+      {
+        "value": "support",
+        "synonyms": []
+      },
+      {
+        "value": "rewrite",
+        "synonyms": []
+      },
+      {
+        "value": "rehost",
+        "synonyms": []
+      },
+      {
+        "value": "retire",
+        "synonyms": []
+      },
+      {
+        "value": "schedule",
+        "synonyms": []
+      },
+      {
+        "value": "health",
+        "synonyms": []
+      },
+      {
+        "value": "more",
+        "synonyms": []
+      },
+      {
+        "value": "passing",
+        "synonyms": []
+      },
+      {
+        "value": "part01of02",
+        "synonyms": []
+      },
+      {
+        "value": "ingestion",
+        "synonyms": []
+      },
+      {
+        "value": "02of02",
+        "synonyms": []
+      },
+      {
+        "value": "mins",
+        "synonyms": []
+      },
+      {
+        "value": "walthrough",
+        "synonyms": []
+      },
+      {
+        "value": "retrieve",
+        "synonyms": []
+      },
+      {
+        "value": "restoration",
+        "synonyms": []
+      },
+      {
+        "value": "delegation",
+        "synonyms": []
+      },
+      {
+        "value": "01of02",
+        "synonyms": []
+      },
+      {
+        "value": "layer",
+        "synonyms": []
+      },
+      {
+        "value": "nosql",
+        "synonyms": []
+      },
+      {
+        "value": "database",
+        "synonyms": []
+      },
+      {
+        "value": "untagged",
+        "synonyms": []
+      },
+      {
+        "value": "zones",
+        "synonyms": []
+      },
+      {
+        "value": "point",
+        "synonyms": []
+      },
+      {
+        "value": "godaddy",
+        "synonyms": []
+      },
+      {
+        "value": "scripting",
+        "synonyms": []
+      },
+      {
+        "value": "securely",
+        "synonyms": []
+      },
+      {
+        "value": "infotech",
+        "synonyms": []
+      },
+      {
+        "value": "resize",
+        "synonyms": []
+      },
+      {
+        "value": "limitations",
+        "synonyms": []
+      },
+      {
+        "value": "fault",
+        "synonyms": []
+      },
+      {
+        "value": "detailed",
+        "synonyms": []
+      },
+      {
+        "value": "behavior",
+        "synonyms": []
+      },
+      {
+        "value": "organizations",
+        "synonyms": []
+      },
+      {
+        "value": "directory",
+        "synonyms": []
+      },
+      {
+        "value": "optimize",
+        "synonyms": []
+      },
+      {
+        "value": "strategies",
+        "synonyms": []
+      },
+      {
+        "value": "begineers",
+        "synonyms": []
+      },
+      {
+        "value": "everyone",
+        "synonyms": []
+      },
+      {
+        "value": "ppk",
+        "synonyms": []
+      },
+      {
+        "value": "scp",
+        "synonyms": []
+      },
+      {
+        "value": "listeners",
+        "synonyms": []
+      },
+      {
+        "value": "boto",
+        "synonyms": []
+      },
+      {
+        "value": "maintain",
+        "synonyms": []
+      },
+      {
+        "value": "subscription",
+        "synonyms": []
+      },
+      {
+        "value": "horizon",
+        "synonyms": []
+      },
+      {
+        "value": "siem",
+        "synonyms": []
+      },
+      {
+        "value": "app",
+        "synonyms": []
+      },
+      {
+        "value": "logging",
+        "synonyms": []
+      },
+      {
+        "value": "side",
+        "synonyms": []
+      },
+      {
+        "value": "ingest",
+        "synonyms": []
+      },
+      {
+        "value": "balancers",
+        "synonyms": []
+      },
+      {
+        "value": "tiered",
+        "synonyms": []
+      },
+      {
+        "value": "repo",
+        "synonyms": []
+      },
+      {
+        "value": "logstash",
+        "synonyms": []
+      },
+      {
+        "value": "necessary",
+        "synonyms": []
+      },
+      {
+        "value": "regions",
+        "synonyms": []
+      },
+      {
+        "value": "capture",
+        "synonyms": []
+      },
+      {
+        "value": "redhat",
+        "synonyms": []
+      },
+      {
+        "value": "minimum",
+        "synonyms": []
+      },
+      {
+        "value": "termination",
+        "synonyms": []
+      },
+      {
+        "value": "level",
+        "synonyms": []
+      },
+      {
+        "value": "based",
+        "synonyms": []
+      },
+      {
+        "value": "export",
+        "synonyms": []
+      },
+      {
+        "value": "compare",
+        "synonyms": []
+      },
+      {
+        "value": "identifying",
+        "synonyms": []
+      },
+      {
+        "value": "connection",
+        "synonyms": []
+      },
+      {
+        "value": "credentials",
+        "synonyms": []
+      },
+      {
+        "value": "authenticate",
+        "synonyms": []
+      },
+      {
+        "value": "analaysis",
+        "synonyms": []
+      },
+      {
+        "value": "same",
+        "synonyms": []
+      },
+      {
+        "value": "janitor",
+        "synonyms": []
+      },
+      {
+        "value": "cicd",
+        "synonyms": []
+      },
+      {
+        "value": "patching",
+        "synonyms": []
+      },
+      {
+        "value": "autodeployment",
+        "synonyms": []
+      },
+      {
+        "value": "rules",
+        "synonyms": []
+      },
+      {
+        "value": "convertion",
+        "synonyms": []
+      },
+      {
+        "value": "cpu",
+        "synonyms": []
+      },
+      {
+        "value": "metric",
+        "synonyms": []
+      },
+      {
+        "value": "outofservice",
+        "synonyms": []
+      },
+      {
+        "value": "important",
+        "synonyms": []
+      },
+      {
+        "value": "import",
+        "synonyms": []
+      },
+      {
+        "value": "iac",
+        "synonyms": []
+      },
+      {
+        "value": "fix",
+        "synonyms": []
+      },
+      {
+        "value": "drift",
+        "synonyms": []
+      },
+      {
+        "value": "changes",
+        "synonyms": []
+      },
+      {
+        "value": "centos",
+        "synonyms": []
+      },
+      {
+        "value": "awscli",
+        "synonyms": []
+      },
+      {
+        "value": "rename",
+        "synonyms": []
+      },
+      {
+        "value": "map",
+        "synonyms": []
+      },
+      {
+        "value": "tables",
+        "synonyms": []
+      },
+      {
+        "value": "failures",
+        "synonyms": []
+      },
+      {
+        "value": "bandwidth",
+        "synonyms": []
+      },
+      {
+        "value": "latency",
+        "synonyms": []
+      },
+      {
+        "value": "easily",
+        "synonyms": []
+      },
+      {
+        "value": "continents",
+        "synonyms": []
+      },
+      {
+        "value": "assign",
+        "synonyms": []
+      },
+      {
+        "value": "knowledge",
+        "synonyms": []
+      },
+      {
+        "value": "webiste",
+        "synonyms": []
+      },
+      {
+        "value": "another",
+        "synonyms": []
+      },
+      {
+        "value": "enabling",
+        "synonyms": []
+      },
+      {
+        "value": "auditing",
+        "synonyms": []
+      },
+      {
+        "value": "servers",
+        "synonyms": []
+      },
+      {
+        "value": "vaults",
+        "synonyms": []
+      },
+      {
+        "value": "introducing",
+        "synonyms": []
+      },
+      {
+        "value": "highly",
+        "synonyms": []
+      },
+      {
+        "value": "generate",
+        "synonyms": []
+      },
+      {
+        "value": "notifications",
+        "synonyms": []
+      },
+      {
+        "value": "slave",
+        "synonyms": []
+      },
+      {
+        "value": "dlm",
+        "synonyms": []
+      },
+      {
+        "value": "managed",
+        "synonyms": []
+      },
+      {
+        "value": "grant",
+        "synonyms": []
+      },
+      {
+        "value": "become",
+        "synonyms": []
+      },
+      {
+        "value": "serve",
+        "synonyms": []
+      },
+      {
+        "value": "origin",
+        "synonyms": []
+      },
+      {
+        "value": "oai",
+        "synonyms": []
+      },
+      {
+        "value": "ready",
+        "synonyms": []
+      },
+      {
+        "value": "technologies",
+        "synonyms": []
+      },
+      {
+        "value": "2017",
+        "synonyms": []
+      },
+      {
+        "value": "etc",
+        "synonyms": []
+      },
+      {
+        "value": "privileges",
+        "synonyms": []
+      },
+      {
+        "value": "fully",
+        "synonyms": []
+      },
+      {
+        "value": "notify",
+        "synonyms": []
+      },
+      {
+        "value": "topics",
+        "synonyms": []
+      },
+      {
+        "value": "email",
+        "synonyms": []
+      },
+      {
+        "value": "s3fs",
+        "synonyms": []
+      },
+      {
+        "value": "script",
+        "synonyms": []
+      },
+      {
+        "value": "durable",
+        "synonyms": []
+      },
+      {
+        "value": "ondemand",
+        "synonyms": []
+      },
+      {
+        "value": "trail",
+        "synonyms": []
+      },
+      {
+        "value": "sync",
+        "synonyms": []
+      },
+      {
+        "value": "programming",
+        "synonyms": []
+      },
+      {
+        "value": "administration",
+        "synonyms": []
+      },
+      {
+        "value": "explained",
+        "synonyms": []
+      },
+      {
+        "value": "recovering",
+        "synonyms": []
+      },
+      {
+        "value": "worker",
+        "synonyms": []
+      },
+      {
+        "value": "gateways",
+        "synonyms": []
+      },
+      {
+        "value": "interface",
+        "synonyms": []
+      },
+      {
+        "value": "outside",
+        "synonyms": []
+      },
+      {
+        "value": "global",
+        "synonyms": []
+      },
+      {
+        "value": "revert",
+        "synonyms": []
+      },
+      {
+        "value": "deviations",
+        "synonyms": []
+      },
+      {
+        "value": "launch",
+        "synonyms": []
+      },
+      {
+        "value": "ecs",
+        "synonyms": []
+      },
+      {
+        "value": "utilization",
+        "synonyms": []
+      },
+      {
+        "value": "without",
+        "synonyms": []
+      },
+      {
+        "value": "mobaxterm",
+        "synonyms": []
+      },
+      {
+        "value": "implement",
+        "synonyms": []
+      },
+      {
+        "value": "associate",
+        "synonyms": []
+      },
+      {
+        "value": "inventory",
+        "synonyms": []
+      },
+      {
+        "value": "requisites",
+        "synonyms": []
+      },
+      {
+        "value": "vpce",
+        "synonyms": []
+      },
+      {
+        "value": "modifications",
+        "synonyms": []
+      },
+      {
+        "value": "strategy",
+        "synonyms": []
+      },
+      {
+        "value": "ssl",
+        "synonyms": []
+      },
+      {
+        "value": "considerations",
+        "synonyms": []
+      },
+      {
+        "value": "architecting",
+        "synonyms": []
+      },
+      {
+        "value": "capacities",
+        "synonyms": []
+      },
+      {
+        "value": "total",
+        "synonyms": []
+      },
+      {
+        "value": "ownership",
+        "synonyms": []
+      },
+      {
+        "value": "exporter",
+        "synonyms": []
+      },
+      {
+        "value": "everytime",
+        "synonyms": []
+      },
+      {
+        "value": "solve",
+        "synonyms": []
+      },
+      {
+        "value": "protection",
+        "synonyms": []
+      },
+      {
+        "value": "downtime",
+        "synonyms": []
+      },
+      {
+        "value": "architecture",
+        "synonyms": []
+      },
+      {
+        "value": "playbook",
+        "synonyms": []
+      },
+      {
+        "value": "centralize",
+        "synonyms": []
+      },
+      {
+        "value": "governance",
+        "synonyms": []
+      },
+      {
+        "value": "job",
+        "synonyms": []
+      },
+      {
+        "value": "realtime",
+        "synonyms": []
+      },
+      {
+        "value": "retention",
+        "synonyms": []
+      },
+      {
+        "value": "lifecycle",
+        "synonyms": []
+      },
+      {
+        "value": "transition",
+        "synonyms": []
+      },
+      {
+        "value": "authorization",
+        "synonyms": []
+      },
+      {
+        "value": "hybrid",
+        "synonyms": []
+      },
+      {
+        "value": "improvement",
+        "synonyms": []
+      },
+      {
+        "value": "recommendations",
+        "synonyms": []
+      },
+      {
+        "value": "streaming",
+        "synonyms": []
+      },
+      {
+        "value": "sse",
+        "synonyms": []
+      },
+      {
+        "value": "overview",
+        "synonyms": []
+      },
+      {
+        "value": "applications",
+        "synonyms": []
+      },
+      {
+        "value": "enforce",
+        "synonyms": []
+      },
+      {
+        "value": "target",
+        "synonyms": []
+      },
+      {
+        "value": "pem",
+        "synonyms": []
+      },
+      {
+        "value": "formation",
+        "synonyms": []
+      },
+      {
+        "value": "work",
+        "synonyms": []
+      },
+      {
+        "value": "works",
+        "synonyms": []
+      },
+      {
+        "value": "archive",
+        "synonyms": []
+      },
+      {
+        "value": "scale",
+        "synonyms": []
+      },
+      {
+        "value": "home",
+        "synonyms": []
+      },
+      {
+        "value": "restore",
+        "synonyms": []
+      },
+      {
+        "value": "tags",
+        "synonyms": []
+      },
+      {
+        "value": "machines",
+        "synonyms": []
+      },
+      {
+        "value": "structure",
+        "synonyms": []
+      },
+      {
+        "value": "shutdown",
+        "synonyms": []
+      },
+      {
+        "value": "namespaces",
+        "synonyms": []
+      },
+      {
+        "value": "memory",
+        "synonyms": []
+      },
+      {
+        "value": "tolerance",
+        "synonyms": []
+      },
+      {
+        "value": "restrictions",
+        "synonyms": []
+      },
+      {
+        "value": "ssh",
+        "synonyms": []
+      },
+      {
+        "value": "invoke",
+        "synonyms": []
+      },
+      {
+        "value": "delivery",
+        "synonyms": []
+      },
+      {
+        "value": "confusion",
+        "synonyms": []
+      },
+      {
+        "value": "nightly",
+        "synonyms": []
+      },
+      {
+        "value": "programmatic",
+        "synonyms": []
+      },
+      {
+        "value": "generations",
+        "synonyms": []
+      },
+      {
+        "value": "back",
+        "synonyms": []
+      },
+      {
+        "value": "clean",
+        "synonyms": []
+      },
+      {
+        "value": "save",
+        "synonyms": []
+      },
+      {
+        "value": "consolidate",
+        "synonyms": []
+      },
+      {
+        "value": "audit",
+        "synonyms": []
+      },
+      {
+        "value": "usage",
+        "synonyms": []
+      },
+      {
+        "value": "sql",
+        "synonyms": []
+      },
+      {
+        "value": "alb",
+        "synonyms": []
+      },
+      {
+        "value": "interconnect",
+        "synonyms": []
+      },
+      {
+        "value": "prem",
+        "synonyms": []
+      },
+      {
+        "value": "foundation",
+        "synonyms": []
+      },
+      {
+        "value": "make",
+        "synonyms": []
+      },
+      {
+        "value": "console",
+        "synonyms": []
+      },
+      {
+        "value": "hosting",
+        "synonyms": []
+      },
+      {
+        "value": "classic",
+        "synonyms": []
+      },
+      {
+        "value": "input",
+        "synonyms": []
+      },
+      {
+        "value": "masterclass",
+        "synonyms": []
+      },
+      {
+        "value": "checks",
+        "synonyms": []
+      },
+      {
+        "value": "retain",
+        "synonyms": []
+      },
+      {
+        "value": "replatform",
+        "synonyms": []
+      },
+      {
+        "value": "replace",
+        "synonyms": []
+      },
+      {
+        "value": "ticket",
+        "synonyms": []
+      },
+      {
+        "value": "keypair",
+        "synonyms": []
+      },
+      {
+        "value": "provisioning",
+        "synonyms": []
+      },
+      {
+        "value": "concepts",
+        "synonyms": []
+      },
+      {
+        "value": "creating",
+        "synonyms": []
+      },
+      {
+        "value": "admin",
+        "synonyms": []
+      },
+      {
+        "value": "restriction",
+        "synonyms": []
+      },
+      {
+        "value": "world",
+        "synonyms": []
+      },
+      {
+        "value": "howto",
+        "synonyms": []
+      },
+      {
+        "value": "procedures",
+        "synonyms": []
+      },
+      {
+        "value": "cases",
+        "synonyms": []
+      },
+      {
+        "value": "merge",
+        "synonyms": []
+      },
+      {
+        "value": "crr",
+        "synonyms": []
+      },
+      {
+        "value": "windows",
+        "synonyms": []
+      },
+      {
+        "value": "sotrage",
+        "synonyms": []
+      },
+      {
+        "value": "savings",
+        "synonyms": []
+      },
+      {
+        "value": "under",
+        "synonyms": []
+      },
+      {
+        "value": "scalable",
+        "synonyms": []
+      },
+      {
+        "value": "middle",
+        "synonyms": []
+      },
+      {
+        "value": "launched",
+        "synonyms": []
+      },
+      {
+        "value": "sets",
+        "synonyms": []
+      },
+      {
+        "value": "sdk",
+        "synonyms": []
+      },
+      {
+        "value": "redundant",
+        "synonyms": []
+      },
+      {
+        "value": "consolidated",
+        "synonyms": []
+      },
+      {
+        "value": "product",
+        "synonyms": []
+      },
+      {
+        "value": "functionalities",
+        "synonyms": []
+      },
+      {
+        "value": "demystified",
+        "synonyms": []
+      },
+      {
+        "value": "down",
+        "synonyms": []
+      }
+    ],
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+  }
+}
