@@ -36,10 +36,10 @@ def set_global_vars():
     try:
         global_vars['Owner']                = "Miztiik"
         global_vars['Environment']          = "Test"
+        global_vars['region_name']          = "us-east-1"
         global_vars['tag_key']              = "Valaxy-HelpDesk-Bot"
         global_vars['faq_db_fname']         = "./data/val.json"
         global_vars['ddb_table_name']       = "valaxy-butler-queries"
-        global_vars['region_name']          = "us-east-1"
         global_vars['update_ddb']           = True
         global_vars['status']               = True
     except Exception as e:
@@ -246,12 +246,14 @@ def get_video_id_intent(global_vars: dict, intent_request: dict) -> dict:
                             'slot_one_svc',
                             f"Your query does not match any AWS Service found. Please try again"
                             )
-    # Insert / Update Dynamodb about search query
-    item = { 'search_query': slots['slot_one_svc'].lower() }
-    if not check_item_exists( global_vars.get('region_name'), global_vars.get('ddb_table_name'), slots['slot_one_svc'] ):
-        create_ddb_item(global_vars.get('region_name'), global_vars.get('ddb_table_name'), item)
-    else:
-        update_ddb_item(global_vars.get('region_name'), global_vars.get('ddb_table_name'), item)
+    # Update Dynamo only if user wants to.
+    if global_vars('update_ddb'):
+        # Insert / Update Dynamodb about search query
+        item = { 'search_query': slots['slot_one_svc'].lower() }
+        if not check_item_exists( global_vars.get('region_name'), global_vars.get('ddb_table_name'), slots['slot_one_svc'] ):
+            create_ddb_item(global_vars.get('region_name'), global_vars.get('ddb_table_name'), item)
+        else:
+            update_ddb_item(global_vars.get('region_name'), global_vars.get('ddb_table_name'), item)
     
     # Begin searching for the search_query(needle) in the haystack
     v_ids = []
