@@ -17,7 +17,6 @@ import boto3
 from boto3.dynamodb.conditions import Key, Attr
 import asyncio
 
-
 # Initialize Logger
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -139,7 +138,7 @@ def check_item_exists(region_name: str, table_name: str, needle: str) -> bool:
     return bool_val
 
 
-def create_ddb_item(region_name: str, table_name: str, item: dict):
+async def create_ddb_item(region_name: str, table_name: str, item: dict):
     """
     Create DDB Item
     """
@@ -157,7 +156,7 @@ def create_ddb_item(region_name: str, table_name: str, item: dict):
         logger.error(f"ERROR: {str(e)}")
 
 
-def update_ddb_item(region_name: str, table_name: str, item: dict):
+async def update_ddb_item(region_name: str, table_name: str, item: dict):
     """
     Helper function to Insert / Update item in table
     Add email_sent attribute and set to true
@@ -247,13 +246,16 @@ def get_video_id_intent(global_vars: dict, intent_request: dict) -> dict:
                             f"Your query does not match any AWS Service found. Please try again"
                             )
     # Update Dynamo only if user wants to.
-    if global_vars('update_ddb'):
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    if global_vars.get('update_ddb'):
         # Insert / Update Dynamodb about search query
         item = { 'search_query': slots['slot_one_svc'].lower() }
         if not check_item_exists( global_vars.get('region_name'), global_vars.get('ddb_table_name'), slots['slot_one_svc'] ):
-            create_ddb_item(global_vars.get('region_name'), global_vars.get('ddb_table_name'), item)
+            loop.run_until_complete( create_ddb_item(global_vars.get('region_name'), global_vars.get('ddb_table_name'), item) )
         else:
-            update_ddb_item(global_vars.get('region_name'), global_vars.get('ddb_table_name'), item)
+            loop.run_until_complete( update_ddb_item(global_vars.get('region_name'), global_vars.get('ddb_table_name'), item) )
+    loop.close()
     
     # Begin searching for the search_query(needle) in the haystack
     v_ids = []
@@ -288,10 +290,6 @@ def get_video_id_intent(global_vars: dict, intent_request: dict) -> dict:
         filter_2 = 5
         s1_v_ids = sorted(v_ids, key=itemgetter('view_count'), reverse=True)[:filter_1]
         s2_v_ids = sorted(s1_v_ids, key=itemgetter('popularity'), reverse=True)[:filter_2]
-
-        #resp['id_lst'] = s2_v_ids
-        resp['status'] = True
-
 
     return close_w_card(
         output_session_attributes,
@@ -335,50 +333,11 @@ def lambda_handler(event, context):
     """
     global_vars = set_global_vars()
     
-    sample_event = {
-          "messageVersion": "1.0",
-          "invocationSource": "FulfillmentCodeHook",
-          "userId": "recpfpf5hkvnmn3fx0ew9gtrga03q8ek",
-          "sessionAttributes": {},
-          "requestAttributes": None,
-          "bot": {
-            "name": "valaxy_helpdesk_bot",
-            "alias": "$LATEST",
-            "version": "$LATEST"
-          },
-          "outputDialogMode": "Text",
-          "currentIntent": {
-            "name": "get_video_id_intent",
-            "slots": {
-              "slot_one_svc": "EC2"
-            },
-            "slotDetails": {
-              "slot_one_svc": {
-                "resolutions": [
-                  {
-                    "value": "EC2"
-                  }
-                ],
-                "originalValue": "EC2"
-              }
-            },
-            "confirmationStatus": "None",
-            "sourceLexNLUIntentInterpretation": None
-          },
-          "inputTranscript": "How to launch an EC2"
-        }
+    resp = {'statusCode': 200, "status": False, "error_message" : '' }
 
-    resp = {'statusCode': 200, "status": False, "error_message" : '' , 'body': json.dumps(event) }
+    resp_chk(global_vars.get('status'), global_vars.get('error_message'))  
 
-    resp_chk(global_vars.get('status'), global_vars.get('error_message'))
-
-    # faq_db = read_from_file( global_vars.get('faq_db_fname') )
-
-    needle = None
-    if 'currentIntent' in event and 'slots' in event['currentIntent']:
-        needle = event['currentIntent']['slots']       
-
-    logger.debug(f"event.bot.name={event['bot']['name']}")
+    # logger.debug(f"event.bot.name={event['bot']['name']}")
 
     return dispatch(global_vars, event)
 
