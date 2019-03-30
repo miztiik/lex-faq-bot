@@ -125,17 +125,25 @@ def check_item_exists(region_name: str, table_name: str, needle: str) -> bool:
     Check if the given dynamodb item exists.
     Query with limit of 1 is performed.
     """
+    resp = { 'item_exists':False }
     if not needle: needle = 'auto'
-    dynamodb = boto3.resource('dynamodb', region_name = region_name)
-    table = dynamodb.Table(table_name)
-    bool_val = False
+    client = boto3.client('dynamodb', region_name = region_name)
     try:
-        response = table.query( KeyConditionExpression=Key('search_query').eq( str(needle).lower() ) )
-        if response.get('Count') == 1 or response.get('Count')>1:
-            bool_val =  True
+        # resp['Items'] = table.query( KeyConditionExpression = Key('search_query').eq( str(needle).lower() ) )
+        r1 = client.query(TableName = table_name,
+                            KeyConditionExpression='search_query = :var1',
+                            ExpressionAttributeValues={
+                                ":var1":{"S": needle.lower()}
+                            },
+                            ProjectionExpression = "search_query, #ui, utterances",
+                            ExpressionAttributeNames = {'#ui': 'user_ids'}
+                            )
+        if ( r1.get('Count') == 1 or r1.get('Count')>1 ) and len(r1.get('Items')) == 1:
+            resp['Items'] = r1.get('Items')
+            resp['item_exists'] =  True
     except Exception as e:
         logger.error(f"ERROR: {str(e)}")
-    return bool_val
+    return resp
 
 
 async def create_ddb_item(region_name: str, table_name: str, item: dict):
@@ -149,7 +157,9 @@ async def create_ddb_item(region_name: str, table_name: str, item: dict):
            Item={
                 'search_query': str( item.get('search_query') ),
                 'search_count': 1,
-                'created_on' : str(datetime.datetime.now())
+                'created_on' : str(datetime.datetime.now()),
+                'user_ids': [item.get('user_id')],
+                'utterances': [item.get('utterance')]
             }
         )
     except Exception as e:
@@ -165,14 +175,22 @@ async def update_ddb_item(region_name: str, table_name: str, item: dict):
     dynamodb = boto3.resource('dynamodb', region_name = region_name)
     table = dynamodb.Table(table_name)
     try:
+        u_ex = f'SET search_count= search_count + :incr, last_searched= :var2'
+        ex_val = {
+                    ':incr' : 1,
+                    ':var2' :str(datetime.datetime.now())
+                }
+        if item.get('user_id'):
+            u_ex+=f', user_ids = list_append(user_ids, :var3)'
+            ex_val[':var3'] = [str( item.get('user_id') ) ]
+        if item.get('utterance'):
+            u_ex+=f', utterances = list_append(utterances, :var4)'
+            ex_val[':var4'] = [str( item.get('utterance') ) ]
         response = table.update_item(TableName = table_name,
                                         Key={'search_query':str( item.get('search_query') ) },
                                         # UpdateExpression='SET email_sent= :var1 REMOVE next_lead',
-                                        UpdateExpression='SET search_count= search_count + :incr, last_searched= :var2',
-                                        ExpressionAttributeValues={
-                                                        ':incr' : 1,
-                                                        ':var2' :str(datetime.datetime.now())
-                                                        }
+                                        UpdateExpression = u_ex,
+                                        ExpressionAttributeValues = ex_val
                                     )
     except Exception as e:
         logger.error(f"ERROR: {str(e)}")
@@ -210,7 +228,7 @@ def close_w_card(session_attributes, fulfillment_state, message, options):
             "responseCard": build_response_card_slack(options)
         }
     }
-    logger.info( json.dumps(response, indent=4, sort_keys=True) )
+    logger.debug( json.dumps(response, indent=4, sort_keys=True) )
     return response
 
 
@@ -233,9 +251,8 @@ def close(session_attributes, fulfillment_state, message_content):
 def get_video_id_intent(global_vars: dict, intent_request: dict) -> dict:    
     resp = { "status": False, "error_message": "", 'id_lst': [] }
 
+    # Slots are dictionary
     slots = intent_request['currentIntent']['slots']
-    logger.info(type(slots))
-    logger.info(slots)
     output_session_attributes = intent_request['sessionAttributes'] if intent_request['sessionAttributes'] is not None else {}
     # If no slots were matched return
     if not slots['slot_one_svc']:
@@ -250,11 +267,30 @@ def get_video_id_intent(global_vars: dict, intent_request: dict) -> dict:
     asyncio.set_event_loop(loop)
     if global_vars.get('update_ddb'):
         # Insert / Update Dynamodb about search query
-        item = { 'search_query': slots['slot_one_svc'].lower() }
-        if not check_item_exists( global_vars.get('region_name'), global_vars.get('ddb_table_name'), slots['slot_one_svc'] ):
+        item = { 'search_query': slots['slot_one_svc'].lower(),
+                 'utterance': intent_request.get('inputTranscript'),
+                 'user_id' : intent_request.get('userId')
+             }
+        i_data = check_item_exists( global_vars.get('region_name'), global_vars.get('ddb_table_name'), slots['slot_one_svc'] )
+        print(i_data)
+        if not i_data.get('item_exists'):
             loop.run_until_complete( create_ddb_item(global_vars.get('region_name'), global_vars.get('ddb_table_name'), item) )
         else:
+            # To avoid adding the same user_ids & utterances again, check
+            for i in i_data.get('Items')[0].get('utterances')['L']:
+                if item.get('utterance') in i['S']:
+                    item.pop('utterance', None)
+                    break
+            for i in i_data.get('Items')[0].get('user_ids')['L']:
+                if item.get('user_id') in i['S']:
+                    item.pop('user_id', None)
+                    break
             loop.run_until_complete( update_ddb_item(global_vars.get('region_name'), global_vars.get('ddb_table_name'), item) )
+        """
+        output_session_attributes = intent_request['sessionAttributes'] if intent_request['sessionAttributes'] is not None else {}
+                if flower_type is not None:
+                    output_session_attributes['Price'] = len(flower_type) * 5  # Elegant pricing model
+        """
     loop.close()
     
     # Begin searching for the search_query(needle) in the haystack
